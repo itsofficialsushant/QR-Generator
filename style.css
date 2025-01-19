@@ -15,13 +15,33 @@ html, body {
     padding: 50px 100px;
     text-align: center;
     border: 5px solid black;
+    border-radius: 20px;
 }
 p{
     font-size: 200%;
 }
 input{
-    width: 100%;
+    height: 50px;
+    width: 250px;
+    border-radius: 20px;
 }
-button:hover{
-
+/* button{
+    background-color: blue;
+    height: 50px;
+    width: 250px;
+    border-radius: 20px;
+} */
+button {
+    background-color: blue;
+    color: white; /* Ensure text is visible on a blue background */
+    height: 50px;
+    width: 250px;
+    border-radius: 20px;
+    border: none; /* Remove default border */
+    cursor: pointer; /* Indicate interactivity */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth animations */
+}
+button:hover {
+    transform: scale(1.05);
+    background-color: gray;
 }

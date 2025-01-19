@@ -7,17 +7,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class = "container">
-        <div class = "input">
+    <div class="container">
+        <div class="input">
             <p>QR Code Generator</p>
-            <input type = "text" id = "inputtext" placeholder = "Enter your url">
-            <button onclick = "generate()">Generate QR</button>
+            <input type="text" id="inputtext" placeholder="Enter your URL">
+            <button onclick="generateQRCode()">Generate QR</button>
         </div>
-        <div class = "qr">
-            <div class = "img">
-                <img src = "" id = "imgqr"><br><br>
+        <div class="qr">
+            <div class="img">
+                <img src="" id="imgqr" alt="QR Code will appear here"><br><br>
             </div>
         </div>
     </div>
+    <script>
+        // Using goqr.me for QR code generation API
+        function generateQRCode() {
+            const inputText = document.getElementById("inputtext").value;
+            const qrImage = document.getElementById("imgqr");
+
+            if (inputText.trim() === "") {
+                alert("Please enter some text to generate a QR Code.");
+                return;
+            }
+
+            // API URL
+            const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(inputText)}`;
+
+            // Set the QR code image source to the API URL
+            qrImage.src = apiUrl;
+            qrImage.alt = "Generated QR Code";
+        }
+    </script>
 </body>
 </html>
