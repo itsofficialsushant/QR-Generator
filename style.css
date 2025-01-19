@@ -3,34 +3,43 @@ html, body {
     margin: 0;
     padding: 0;
 }
-.container{
+
+.container {
     background-color: blue;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column; /* Stack items vertically */
     height: 100%;
 }
-.input{
+
+.input {
     background-color: white;
     padding: 50px 100px;
     text-align: center;
     border: 5px solid black;
     border-radius: 20px;
+    margin-bottom: 20px; /* Add space between the input and the QR section */
 }
-p{
+
+.qr {
+    text-align: center;
+}
+
+.img {
+    margin-top: 20px; /* Add space above the QR code */
+}
+
+p {
     font-size: 200%;
 }
-input{
+
+input {
     height: 50px;
     width: 250px;
     border-radius: 20px;
 }
-/* button{
-    background-color: blue;
-    height: 50px;
-    width: 250px;
-    border-radius: 20px;
-} */
+
 button {
     background-color: blue;
     color: white; /* Ensure text is visible on a blue background */
@@ -41,6 +50,7 @@ button {
     cursor: pointer; /* Indicate interactivity */
     transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth animations */
 }
+
 button:hover {
     transform: scale(1.05);
     background-color: gray;
