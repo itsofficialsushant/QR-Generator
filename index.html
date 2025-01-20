@@ -10,12 +10,13 @@
     <div class="container">
         <div class="input">
             <p>QR Code Generator</p>
-            <input type="text" id="inputtext" placeholder="Enter your URL">
+            <input type="text" id="inputtext" style="margin-right: 10px;" placeholder="Paste your URL">
             <button onclick="generateQRCode()">Generate QR</button>
         </div>
         <div class="qr">
             <div class="img">
-                <img src="" id="imgqr" alt="QR Code will appear here"><br><br>
+                <img src="" id="imgqr" alt="QR Code Loading..."><br><br>
+                <button id="downloadBtn" style="display: none;">Download QR Code</button>
             </div>
         </div>
     </div>
