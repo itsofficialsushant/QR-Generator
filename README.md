@@ -1,2 +1,2 @@
 # QR-Generator
-A simple QR Generator code
+A Basic Project uses QR Code Api and helps to convert any links, texts, etc into a scannable QR.
